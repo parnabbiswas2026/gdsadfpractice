@@ -1,0 +1,15 @@
+{
+	"name": "gdsadfpractice1",
+	"properties": {
+		"trustModeClaimForMi": {
+			"value": "Disabled",
+			"editable": true
+		}
+	},
+	"location": "westus3",
+	"identity": {
+		"type": "SystemAssigned",
+		"principalId": "cdfadde8-f83f-4208-b11f-0482e980c9fe",
+		"tenantId": "9211e00f-7f2c-4128-a951-b2d25729f723"
+	}
+}
