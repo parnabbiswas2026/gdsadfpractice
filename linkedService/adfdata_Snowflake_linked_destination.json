@@ -1,0 +1,20 @@
+{
+	"name": "adfdata_Snowflake_linked_destination",
+	"type": "Microsoft.DataFactory/factories/linkedservices",
+	"properties": {
+		"annotations": [],
+		"type": "SnowflakeV2",
+		"typeProperties": {
+			"authenticationType": "Basic",
+			"accountIdentifier": "FUFTRYV-KQ31022",
+			"user": "parnab1997",
+			"database": "SALES_MART",
+			"warehouse": "SNOWFLAKE_LEARNING_WH",
+			"role": "ACCOUNTADMIN",
+			"host": "fuftryv-kq31022.snowflakecomputing.com",
+			"useUtcTimestamps": false,
+			"encryptedCredential": "ew0KICAiVmVyc2lvbiI6ICIyMDE3LTExLTMwIiwNCiAgIlByb3RlY3Rpb25Nb2RlIjogIktleSIsDQogICJTZWNyZXRDb250ZW50VHlwZSI6ICJQbGFpbnRleHQiLA0KICAiQ3JlZGVudGlhbElkIjogIkRBVEFGQUNUT1JZQDcwNDVGQzBGLTA1QjgtNEREMy1BMjcxLTlBNzg3N0I4NTIzN182MDIxYzU2Mi0wNTYwLTQ4YTktODFiYy0wNDkyOWFiNDMzMDYiDQp9"
+		},
+		"version": "1.1"
+	}
+}
