@@ -1,5 +1,5 @@
 {
-	"name": "DelimitedText1",
+	"name": "SalesSource",
 	"properties": {
 		"linkedServiceName": {
 			"referenceName": "adfdata_Storage_linked_source",
