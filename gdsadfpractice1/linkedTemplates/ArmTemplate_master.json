@@ -1,0 +1,84 @@
+{
+	"$schema": "http://schema.management.azure.com/schemas/2015-01-01/deploymentTemplate.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"type": "string",
+			"metadata": "Data Factory name",
+			"defaultValue": "gdsadfpractice1"
+		},
+		"adfdata_Snowflake_linked_destination_password": {
+			"type": "secureString",
+			"metadata": "Secure string for 'password' of 'adfdata_Snowflake_linked_destination'"
+		},
+		"adfdata_Storage_linked_source_accountKey": {
+			"type": "secureString",
+			"metadata": "Secure string for 'accountKey' of 'adfdata_Storage_linked_source'"
+		},
+		"adfdata_Snowflake_linked_destination_properties_typeProperties_database": {
+			"type": "string",
+			"defaultValue": "SALES_MART"
+		},
+		"adfdata_Snowflake_linked_destination_properties_typeProperties_role": {
+			"type": "string",
+			"defaultValue": "ACCOUNTADMIN"
+		},
+		"adfdata_Snowflake_linked_destination_properties_typeProperties_host": {
+			"type": "string",
+			"defaultValue": "fuftryv-kq31022.snowflakecomputing.com"
+		},
+		"adfdata_Storage_linked_source_properties_typeProperties_url": {
+			"type": "string",
+			"defaultValue": "https://gdsdatalake.dfs.core.windows.net/"
+		},
+		"containerUri": {
+			"type": "string",
+			"metadata": "URI to storage account containing linked ARM templates"
+		},
+		"containerSasToken": {
+			"type": "string",
+			"metadata": "Sas token to storage account containing linked ARM templates"
+		}
+	},
+	"variables": {
+		"factoryId": "[concat('Microsoft.DataFactory/factories/', parameters('factoryName'))]"
+	},
+	"resources": [
+		{
+			"name": "gdsadfpractice1_ArmTemplate_0",
+			"type": "Microsoft.Resources/deployments",
+			"apiVersion": "2024-03-01",
+			"properties": {
+				"mode": "incremental",
+				"templateLink": {
+					"uri": "[concat(parameters('containerUri'), '/ArmTemplate_0.json', parameters('containerSasToken'))]",
+					"contentVersion": "1.0.0.0"
+				},
+				"parameters": {
+					"factoryName": {
+						"value": "[parameters('factoryName')]"
+					},
+					"adfdata_Snowflake_linked_destination_password": {
+						"value": "[parameters('adfdata_Snowflake_linked_destination_password')]"
+					},
+					"adfdata_Storage_linked_source_accountKey": {
+						"value": "[parameters('adfdata_Storage_linked_source_accountKey')]"
+					},
+					"adfdata_Snowflake_linked_destination_properties_typeProperties_database": {
+						"value": "[parameters('adfdata_Snowflake_linked_destination_properties_typeProperties_database')]"
+					},
+					"adfdata_Snowflake_linked_destination_properties_typeProperties_role": {
+						"value": "[parameters('adfdata_Snowflake_linked_destination_properties_typeProperties_role')]"
+					},
+					"adfdata_Snowflake_linked_destination_properties_typeProperties_host": {
+						"value": "[parameters('adfdata_Snowflake_linked_destination_properties_typeProperties_host')]"
+					},
+					"adfdata_Storage_linked_source_properties_typeProperties_url": {
+						"value": "[parameters('adfdata_Storage_linked_source_properties_typeProperties_url')]"
+					}
+				}
+			},
+			"dependsOn": []
+		}
+	]
+}

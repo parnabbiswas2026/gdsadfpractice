@@ -1,0 +1,27 @@
+{
+	"$schema": "https://schema.management.azure.com/schemas/2015-01-01/deploymentParameters.json#",
+	"contentVersion": "1.0.0.0",
+	"parameters": {
+		"factoryName": {
+			"value": "gdsadfpractice1"
+		},
+		"adfdata_Snowflake_linked_destination_password": {
+			"value": ""
+		},
+		"adfdata_Storage_linked_source_accountKey": {
+			"value": ""
+		},
+		"adfdata_Snowflake_linked_destination_properties_typeProperties_database": {
+			"value": "SALES_MART"
+		},
+		"adfdata_Snowflake_linked_destination_properties_typeProperties_role": {
+			"value": "ACCOUNTADMIN"
+		},
+		"adfdata_Snowflake_linked_destination_properties_typeProperties_host": {
+			"value": "fuftryv-kq31022.snowflakecomputing.com"
+		},
+		"adfdata_Storage_linked_source_properties_typeProperties_url": {
+			"value": "https://gdsdatalake.dfs.core.windows.net/"
+		}
+	}
+}
